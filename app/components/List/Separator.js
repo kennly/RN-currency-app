@@ -1,15 +1,15 @@
 import React, { PropTypes } from 'react';
-import { Text } from 'react-native';
-import moment from 'moment';
+import { View } from 'react-native';
 
 import styles from './styles';
 
-const Separator = ({base, quote, conversionRate, date}) => {
+const Separator = () => {
 
   return (
-    <Text style={styles.smallText}>
-      1 {base} = {conversionRate} {quote} as of {moment(date).format('MMMM D, YYYY')}
-    </Text>
+    <View
+      style={styles.separator}
+    >
+    </View>
   )
 };
 

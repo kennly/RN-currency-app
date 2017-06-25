@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { View, FlatList, Text, StatusBar } from 'react-native';
 import currencies from '../data/currencies.js';
-import { ListItem } from '../components/List';
+import { ListItem, Separator } from '../components/List';
 
-const CurrencyList = () => {
+
+const Options = () => {
 
   const TEMP_CURRENT_CURRENCY = 'AUD';
 
@@ -21,13 +22,14 @@ const CurrencyList = () => {
             text={item}
             selected={ item === TEMP_CURRENT_CURRENCY}
             onPress={this.handlePress}
-          />  
+          />
         )}
         keyExtractor={item => item}
+        ItemSeparatorComponent={Separator}
         />
     </View>
   )
 };
 
 
-export default CurrencyList;
+export default Options;
